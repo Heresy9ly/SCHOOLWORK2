@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACE COMBAT 7 · SKIES UNKNOWN — 皇牌空战7 未知空域</title>
+<meta name="description" content="《皇牌空战7 未知空域》粉丝宣传站 · 入口">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><path d='M14 1L26 14L14 27L2 14L14 1Z' stroke='%237CC4F5' fill='none' stroke-width='1.6'/><path d='M14 8L20 14L14 20L8 14L14 8Z' fill='%23FF7A1A'/></svg>">
+</head>
+<body>
+
+<main class="poster" id="poster">
+  <div class="poster__bg" aria-hidden="true"></div>
+  <div class="poster__veil" aria-hidden="true"></div>
+  <div class="grid-tex" aria-hidden="true"></div>
+
+  <!-- HUD 四角准星 -->
+  <div class="hud-corner hud-corner--tl"></div>
+  <div class="hud-corner hud-corner--tr"></div>
+  <div class="hud-corner hud-corner--bl"></div>
+  <div class="hud-corner hud-corner--br"></div>
+
+  <!-- 顶部状态栏 -->
+  <header class="poster__topbar">
+    <span class="poster__brand">ACE COMBAT™ 7&ensp;//&ensp;SKIES UNKNOWN</span>
+    <span class="poster__pub">BANDAI NAMCO ENTERTAINMENT</span>
+  </header>
+
+  <!-- 中央主视觉 -->
+  <section class="poster__center">
+    <p class="poster__eyebrow">PROJECT ACES&ensp;×&ensp;UNREAL ENGINE 4</p>
+    <h1 class="poster__title">ACE COMBAT 7</h1>
+    <p class="poster__sub">SKIES UNKNOWN</p>
+    <p class="poster__cn">皇牌空战 7 · 未知空域</p>
+    <div class="poster__rule"></div>
+    <p class="poster__meta">2019.01.17&ensp;·&ensp;PS4&ensp;/&ensp;XBOX ONE&ensp;/&ensp;PC&ensp;/&ensp;SWITCH</p>
+    <a class="btn--cut" href="SHOUYE.html" onclick="event.stopPropagation()">
+      <svg class="cut-arrow" viewBox="0 0 22 22" fill="none"><path d="M4 11H17M17 11L11.5 5.5M17 11L11.5 16.5" stroke="#FF7A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      进入官网
+      <span class="cut-en">ENTER SITE</span>
+    </a>
+  </section>
+
+  <!-- 底部信息栏 -->
+  <footer class="poster__bottom">
+    <div class="poster__sales">
+      <span class="poster__dot"></span>
+      <span>全球累计销量突破 250 万套 · 系列历史新高</span>
+    </div>
+    <div class="poster__scroll">
+      <span class="poster__scroll-text">SCROLL TO ENTER</span>
+      <svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1V17M8 17L2.5 11.5M8 17L13.5 11.5" stroke="#7CC4F5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </footer>
+</main>
+
+<script>
+  // 全屏即入口：点击海报任意位置进入官网（按钮自身跳转除外）
+  document.getElementById('poster').addEventListener('click', function () {
+    location.href = 'SHOUYE.html';
+  });
+  // 滚轮 / 触摸滑动同样进入
+  let wheelLock = false;
+  window.addEventListener('wheel', function (e) {
+    if (wheelLock || Math.abs(e.deltaY) < 12) return;
+    wheelLock = true; location.href = 'SHOUYE.html';
+  }, { passive: true });
+</script>
+</body>
+</html>
